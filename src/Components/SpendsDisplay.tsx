@@ -23,8 +23,8 @@ function SpendsDisplay() {
     <div>
     {formList.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).map((spendData: {spends: string; minusmoney: number; date: string}, index) => (
     <div key={index}>
-    <p>На что: {spendData.spends}</p>
-    <p>Сколько стоило: {spendData.minusmoney}руб.</p>
+    <p>Название: {spendData.spends}</p>
+    <p>Цена: {spendData.minusmoney}руб.</p>
     <p>Когда: {formatDate(spendData.date)}</p>
     </div>
     ))}

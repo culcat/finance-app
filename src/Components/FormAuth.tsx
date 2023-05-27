@@ -30,10 +30,18 @@ function FormAuth(){
         history('/account');
     }
     return(
+        <>
+        <h3>Регистрация</h3>
         <form onSubmit={handleSubmit}>
-            <input type='text' name='name' onChange={handleChange} />
+            <input 
+            type='text'
+            placeholder="Введите имя"
+            name='name'
+            onChange={handleChange} 
+              />
             <button type='submit'>Отправить</button>
         </form>
+        </>
     )
 }
 export default FormAuth

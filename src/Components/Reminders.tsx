@@ -45,11 +45,13 @@ function Reminders() {
  <form onSubmit={handleSubmit}>
  <input
  name="spends"
+ placeholder="Название"
  value={spendData.spends}
  onChange={handleChange}
  />
  <input
  name="minusmoney"
+ placeholder="Цена"
  value={spendData.minusmoney}
  onChange={handleChange}
  />

@@ -51,13 +51,17 @@ function AddSpend() {
 
   return (
     <>
-      <FormAuthDisplay />
       <form onSubmit={handleSubmit}>
-        <input name="spends" value={spendData.spends} onChange={handleChange} />
+        <input 
+         name="spends"
+         placeholder="Название"
+         value={spendData.spends} 
+         onChange={handleChange}
+          />
         <input
           name="minusmoney"
+          placeholder="Цена"
           type="number"
-          value={spendData.minusmoney}
           onChange={handleChange}
         />
         <input

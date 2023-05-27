@@ -27,7 +27,6 @@ function Change(){
     }
     return(
         <>
-            <FormAuthDisplay/>
             <form onSubmit={handleSubmit}>
                 <p>Введите ваш текущий счет:</p>
                 <input name='money' onChange={handleChange}/>
