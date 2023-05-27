@@ -37,14 +37,14 @@ function RemindersDisplay() {
  return (
  <>
  <Link to='add'><button>Добавить</button></Link>
- <h3>Актуальные уведомления:</h3>
+ <h3>Актуальные:</h3>
  {formList.map((spendData, index) => (
  (( new Date(spendData.date).getTime() - new Date(dateToDay).getTime() ) / (1000 * 60 * 60 * 24) >= 0 ? <div key={index}>
  <p>На что: {spendData.spends}</p>
  <p>Сколько стоит: {spendData.minusmoney}руб.</p>
  <p>Когда: {formatDate(spendData.date)}</p>
  </div>:null)))}
- <h3>Просроченные уведомления:</h3>
+ <h3>Просроченные:</h3>
  {formList.map((spendData, index) => (
  ((new Date(spendData.date).getTime() - new Date(dateToDay).getTime()) / (1000 * 60 * 60 * 24) < 0 ? <div key={index}>
  <p>На что: {spendData.spends}</p>
